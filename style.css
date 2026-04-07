@@ -166,7 +166,7 @@ input:focus {
 
 /* BUG 1: Forgot Password link is invisible because its color matches the background splash */
 .forgot-password {
-    color: #0f172a; /* BUG: Same as bg-color, hidden! */
+    color: var(--text-dim); /* Fix: Change color to var(--text-dim) */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
