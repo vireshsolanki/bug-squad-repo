@@ -188,7 +188,7 @@ button {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
-    pointer-events: none; /* BUG: User cannot click the button! */
+    pointer-events: auto; /* Fix: Allow the button to be clickable */
     box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.2);
 }
 
