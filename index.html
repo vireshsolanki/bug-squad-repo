@@ -1,1 +1,70 @@
-Final Success
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squad Login - Bug Demo</title>
+    <style>
+        /* This is the buggy version for the squad to fix */
+        body { 
+            font-family: 'Inter', sans-serif; 
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            background: #ffffff; /* Bug: Background is too white, hurting eyes */
+            margin: 0;
+        }
+        .login-card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            border: 1px solid #eee;
+            width: 100%; 
+            max-width: 400px; 
+            text-align: center; 
+        }
+        h1 { color: #1c1e21; margin-bottom: 24px; font-weight: 600; }
+        .input-group { margin-bottom: 15px; text-align: left; }
+        label { display: block; font-size: 14px; margin-bottom: 5px; color: #555; }
+        input { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #ddd; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            background: #f9f9f9;
+        }
+        /* Bug: Button is way too small and hard to click */
+        button { 
+            background: #000000; 
+            color: white; 
+            padding: 5px 10px; /* Too small! */
+            border: none; 
+            border-radius: 4px; 
+            font-size: 11px; /* Too small! */
+            cursor: pointer; 
+            margin-top: 15px;
+            transition: all 0.2s;
+        }
+        .footer { margin-top: 25px; font-size: 12px; color: #bbb; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h1>Sign In</h1>
+        <form>
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter your email">
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+            <button type="submit">LOGIN</button>
+        </form>
+        <div class="footer">Protected by Bug Squad Engine</div>
+    </div>
+</body>
+</html>
