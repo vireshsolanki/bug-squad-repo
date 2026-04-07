@@ -183,7 +183,7 @@ button {
     color: white;
     border: none;
     border-radius: 12px;
-    padding: 14px;
+    padding: 14px 20px; /* Adjusted padding for better button size */
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
