@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (email === 'admin@bugsquad.com' && password === 'admin123') {
-            showNotice('Login successful! Welcome to Bug Squad.', 'success');
+            showNotice('hello world from bots', 'success');
         } else {
             showNotice('Invalid credentials. Please try again.', 'error');
         }
