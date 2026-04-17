@@ -1,12 +1,24 @@
 import React, { useState } from 'react';
 
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [emailError, setEmailError] = useState('');
+
+  const handleEmailChange = (event) => {
+    const newEmail = event.target.value;
+    setEmail(newEmail);
+    if (!emailRegex.test(newEmail)) {
+      setEmailError('Invalid email address');
+    } else {
+      setEmailError('');
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // BUG #1: Hardcoded URL instead of using import.meta.env.VITE_API_URL
     console.log("Authenticating with: http://localhost:8080/api/login");
     console.log("Data:", { email, password });
   };
@@ -24,16 +36,16 @@ const Login = () => {
             type="email" 
             placeholder="name@company.com" 
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleEmailChange}
           />
+          {emailError && <div style={{color: 'red'}}>{emailError}</div>}
         </div>
         
         <div className="form-group">
           <label htmlFor="password">Password</label>
-          {/* BUG #2: type="text" instead of "password" */}
           <input 
             id="password"
-            type="text" 
+            type="password" 
             placeholder="••••••••" 
             value={password}
             onChange={(e) => setPassword(e.target.value)}
