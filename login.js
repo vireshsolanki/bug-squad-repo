@@ -15,12 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     messageDisplay.style.display = 'none';
     form.insertAdjacentElement('beforebegin', messageDisplay);
 
-    // TOGGLE PASSWORD VISIBILITY BUG: The icon click doesn't actually toggle the type
+    // TOGGLE PASSWORD VISIBILITY 
     const visibilityIcon = document.querySelector('.input-wrapper i');
     visibilityIcon?.addEventListener('click', () => {
-        // BUG: Incomplete logic, doesn't actually toggle!
-        console.log("Toggle visibility clicked");
-        passwordInput.value = passwordInput.value; // NOP!
+        passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
     });
 
     form.addEventListener('submit', (e) => {
