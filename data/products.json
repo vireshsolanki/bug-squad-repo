@@ -1,0 +1,14 @@
+[
+  { "id": "prod_001", "name": "iPhone 15 Pro",                  "price": 999.99,  "stock": 45,  "category": "Electronics", "status": "in_stock",    "sku": "APL-IP15P",   "createdAt": "2024-01-10" },
+  { "id": "prod_002", "name": "Samsung Galaxy S24",             "price": 849.99,  "stock": 32,  "category": "Electronics", "status": "in_stock",    "sku": "SAM-GS24",    "createdAt": "2024-01-12" },
+  { "id": "prod_003", "name": "MacBook Pro M3",                 "price": 1999.00, "stock": 0,   "category": "Computers",   "status": "out_of_stock","sku": "APL-MBP-M3",  "createdAt": "2024-01-05" },
+  { "id": "prod_004", "name": "Sony WH-1000XM5 Headphones",    "price": 279.99,  "stock": 78,  "category": "Audio",       "status": "in_stock",    "sku": "SNY-WH1000",  "createdAt": "2024-01-20" },
+  { "id": "prod_005", "name": "Dell XPS 15 Laptop",             "price": 1549.00, "stock": 0,   "category": "Computers",   "status": "out_of_stock","sku": "DLL-XPS15",   "createdAt": "2024-01-08" },
+  { "id": "prod_006", "name": "iPad Air (5th Gen)",             "price": 599.99,  "stock": 120, "category": "Electronics", "status": "in_stock",    "sku": "APL-IPA5",    "createdAt": "2024-01-18" },
+  { "id": "prod_007", "name": "Logitech MX Master 3S",         "price": 99.99,   "stock": 200, "category": "Accessories", "status": "in_stock",    "sku": "LGT-MXM3S",   "createdAt": "2024-01-22" },
+  { "id": "prod_008", "name": "LG 27\" 4K UltraFine Monitor",  "price": 449.00,  "stock": 15,  "category": "Monitors",    "status": "in_stock",    "sku": "LG-27UK850",  "createdAt": "2024-01-16" },
+  { "id": "prod_009", "name": "Google Pixel 8 Pro",             "price": 799.00,  "stock": 0,   "category": "Electronics", "status": "out_of_stock","sku": "GGL-PX8P",    "createdAt": "2024-01-25" },
+  { "id": "prod_010", "name": "Keychron Q3 Keyboard",          "price": 149.99,  "stock": 55,  "category": "Accessories", "status": "in_stock",    "sku": "KCH-Q3-BLK",  "createdAt": "2024-01-30" },
+  { "id": "prod_011", "name": "Anker USB-C Hub 10-in-1",       "price": 49.99,   "stock": 300, "category": "Accessories", "status": "in_stock",    "sku": "ANK-USB10",   "createdAt": "2024-02-01" },
+  { "id": "prod_012", "name": "ASUS ROG Zephyrus G14",         "price": 2299.00, "stock": 8,   "category": "Computers",   "status": "in_stock",    "sku": "ASS-ROG-G14", "createdAt": "2024-02-05" }
+]
