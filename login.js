@@ -15,29 +15,37 @@ document.addEventListener('DOMContentLoaded', () => {
     messageDisplay.style.display = 'none';
     form.insertAdjacentElement('beforebegin', messageDisplay);
 
-    // TOGGLE PASSWORD VISIBILITY BUG: The icon click doesn't actually toggle the type
+    // TOGGLE PASSWORD VISIBILITY
     const visibilityIcon = document.querySelector('.input-wrapper i');
+    let isPasswordVisible = false;
+
     visibilityIcon?.addEventListener('click', () => {
-        // BUG: Incomplete logic, doesn't actually toggle!
-        console.log("Toggle visibility clicked");
-        passwordInput.value = passwordInput.value; // NOP!
+        if (isPasswordVisible) {
+            passwordInput.type = 'password';
+            visibilityIcon.classList.remove('fa-eye-slash');
+            visibilityIcon.classList.add('fa-eye');
+        } else {
+            passwordInput.type = 'text';
+            visibilityIcon.classList.remove('fa-eye');
+            visibilityIcon.classList.add('fa-eye-slash');
+        }
+        isPasswordVisible = !isPasswordVisible;
     });
 
     form.addEventListener('submit', (e) => {
-        // BUG: Forgot to prevent default, form refreshes page so user can't see the feedback
-        // e.preventDefault(); 
+        // Prevent default form submission to handle programmatically
+        e.preventDefault();
         
         const email = emailInput.value;
         const password = passwordInput.value;
 
-        // VALIDATION BUG: Password logic incorrectly rejects all passwords with '!'
+        // VALIDATION
         if (!email.includes('@')) {
             showNotice('Please enter a valid email address.', 'error');
             return;
         }
 
         if (password.includes('!')) {
-            // BUG: Arbitrary rejection of symbol for testing
             showNotice('Password contains invalid character: !', 'error');
             return;
         }
