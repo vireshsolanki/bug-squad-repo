@@ -9,8 +9,7 @@ const ProductList = () => {
     { id: 4, name: 'MacBook Pro M3' }
   ];
 
-  // BUG #1: Case-sensitive search. 'apple' won't match 'Apple'
-  const filteredProducts = products.filter(p => p.name.includes(search));
+  const filteredProducts = products.filter(p => p.name.toLowerCase().includes(search.toLowerCase()));
 
   return (
     <div className="product-list" style={{ marginTop: '20px' }}>
