@@ -12,7 +12,7 @@ interface StoreState {
   addToCart: (item: CartItem) => void
   removeFromCart: (id: string) => void
   clearCart: () => void
-  logout: () => void
+  logoutAction: () => void // Renamed for clarity
 }
 
 export const useStore = create<StoreState>((set, get) => ({
@@ -45,7 +45,7 @@ export const useStore = create<StoreState>((set, get) => ({
 
   clearCart: () => set({ cart: [] }),
 
-  logout: () => {
-    set({ products: [], error: null })
+  logoutAction: () => {
+    set({ cart: [], products: [], error: null })
   },
 }))
