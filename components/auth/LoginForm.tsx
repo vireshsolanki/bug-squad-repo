@@ -59,7 +59,7 @@ export default function LoginForm() {
             onChange={e => setPassword(e.target.value)}
             autoComplete="current-password"
           />
-          <span className="helper">Minumum 8 characters</span>
+          <span className="helper">Minimum 8 characters</span>
         </div>
 
         {error && <p className="form-error">{error}</p>}
