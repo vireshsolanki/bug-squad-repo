@@ -23,3 +23,8 @@ export function formatDate(dateString: string): string {
     day: 'numeric',
   }).format(new Date(dateString))
 }
+
+export function formatNumber(value: number): string {
+  if (isNaN(value)) return '0'
+  return value.toLocaleString()
+}
