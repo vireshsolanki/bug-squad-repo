@@ -12,7 +12,10 @@ export function formatOrderCount(value: number): string {
   return count.toLocaleString()
 }
 
-export function formatPercentage(value: number, decimals = 1): string {
+export function formatPercentage(value: number | undefined | null, decimals = 1): string {
+  if (value === undefined || value === null || isNaN(value)) {
+    return '0%'
+  }
   return `${value.toFixed(decimals)}%`
 }
 
