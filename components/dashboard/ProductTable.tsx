@@ -8,13 +8,13 @@ import Pagination from '@/components/ui/Pagination'
 
 interface ProductTableProps {
   products: Product[]
+  search?: string
 }
 
 type StatusFilter = 'all' | 'in_stock' | 'out_of_stock'
 type SortOrder   = 'asc' | 'desc'
 
-export default function ProductTable({ products }: ProductTableProps) {
-  const [search,       setSearch]       = useState('')
+export default function ProductTable({ products, search = '' }: ProductTableProps) {
   const [sortOrder,    setSortOrder]    = useState<SortOrder>('asc')
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all')
   const [category,     setCategory]     = useState('all')
@@ -22,7 +22,7 @@ export default function ProductTable({ products }: ProductTableProps) {
   const categories = ['all', ...Array.from(new Set(products.map(p => p.category)))]
 
   const filtered = products
-    .filter(p => p.name.includes(search))
+    .filter(p => p.name.toLowerCase().includes(search.toLowerCase()))
     .filter(p => category === 'all' || p.category === category)
     .filter(p => {
       if (statusFilter === 'all') return true
@@ -30,7 +30,7 @@ export default function ProductTable({ products }: ProductTableProps) {
       return p.status === statusFilter
     })
     .sort((a, b) =>
-      sortOrder === 'asc' ? b.price - a.price : a.price - b.price
+      sortOrder === 'asc' ? a.price - b.price : b.price - a.price
     )
 
   return (
