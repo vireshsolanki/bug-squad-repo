@@ -22,7 +22,7 @@ export default function ProductTable({ products }: ProductTableProps) {
   const categories = ['all', ...Array.from(new Set(products.map(p => p.category)))]
 
   const filtered = products
-    .filter(p => p.name.includes(search))
+    .filter(p => p.name.toLowerCase().includes(search.toLowerCase()))
     .filter(p => category === 'all' || p.category === category)
     .filter(p => {
       if (statusFilter === 'all') return true
