@@ -27,17 +27,17 @@ export default function Pagination({ total, pageSize, onPageChange }: Pagination
         <button
           className="page-btn"
           onClick={() => goTo(currentPage - 1)}
-          disabled={currentPage <= 1}
+          disabled={currentPage <= 0}
         >
           ← Prev
         </button>
         <span style={{ padding: '6px 10px', fontSize: '0.8125rem' }}>
-          Page {currentPage} of {totalPages}
+          Page {currentPage + 1} of {totalPages}
         </span>
         <button
           className="page-btn"
           onClick={() => goTo(currentPage + 1)}
-          disabled={currentPage >= totalPages}
+          disabled={currentPage >= totalPages - 1}
         >
           Next →
         </button>
