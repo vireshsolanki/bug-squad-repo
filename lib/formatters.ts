@@ -1,10 +1,19 @@
-export function formatCurrency(amount: number, currency = 'USD'): string {
+export function formatCurrency(amount: number | string, currency = 'USD'): string {
+  let numericAmount: number;
+  if (typeof amount === 'string') {
+    numericAmount = parseFloat(amount);
+    if (isNaN(numericAmount)) {
+      numericAmount = 0;
+    }
+  } else {
+    numericAmount = amount;
+  }
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency,
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
-  }).format(amount)
+  }).format(numericAmount)
 }
 
 export function formatOrderCount(value: number): string {
