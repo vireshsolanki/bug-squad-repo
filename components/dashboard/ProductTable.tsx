@@ -5,6 +5,7 @@ import type { Product } from '@/lib/types'
 import { formatCurrency } from '@/lib/formatters'
 import FilterBar from '@/components/dashboard/FilterBar'
 import Pagination from '@/components/ui/Pagination'
+import SearchBar from '@/components/dashboard/SearchBar'
 
 interface ProductTableProps {
   products: Product[]
@@ -36,6 +37,7 @@ export default function ProductTable({ products }: ProductTableProps) {
   return (
     <div>
       <div className="table-toolbar" style={{ marginBottom: 12 }}>
+        <SearchBar onSearch={setSearch} placeholder="Search products..." />
         <FilterBar
           categories={categories}
           onCategoryChange={(e: React.ChangeEvent<HTMLInputElement>) => setCategory(e.target.value)}
