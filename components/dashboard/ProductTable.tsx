@@ -18,6 +18,7 @@ export default function ProductTable({ products }: ProductTableProps) {
   const [sortOrder,    setSortOrder]    = useState<SortOrder>('asc')
   const [statusFilter, setStatusFilter] = useState<StatusFilter>('all')
   const [category,     setCategory]     = useState('all')
+  const [currentPage,  setCurrentPage]  = useState(1) // Add state for current page
 
   const categories = ['all', ...Array.from(new Set(products.map(p => p.category)))]
 
@@ -32,6 +33,10 @@ export default function ProductTable({ products }: ProductTableProps) {
     .sort((a, b) =>
       sortOrder === 'asc' ? b.price - a.price : a.price - b.price
     )
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page)
+  }
 
   return (
     <div>
@@ -70,7 +75,7 @@ export default function ProductTable({ products }: ProductTableProps) {
               </tr>
             </thead>
             <tbody>
-              {filtered.map(p => (
+              {filtered.slice((currentPage - 1) * 8, currentPage * 8).map(p => (
                 <tr key={p.id}>
                   <td style={{ fontWeight: 500 }}>{p.name}</td>
                   <td className="sku-cell">{p.sku}</td>
@@ -94,7 +99,7 @@ export default function ProductTable({ products }: ProductTableProps) {
           </table>
         )}
 
-        <Pagination total={filtered.length} pageSize={8} />
+        <Pagination total={filtered.length} pageSize={8} onPageChange={handlePageChange} />
       </div>
     </div>
   )
