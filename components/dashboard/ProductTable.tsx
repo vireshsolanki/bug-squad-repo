@@ -33,6 +33,10 @@ export default function ProductTable({ products }: ProductTableProps) {
       sortOrder === 'asc' ? b.price - a.price : a.price - b.price
     )
 
+  const capitalizeFirstLetter = (str: string) => {
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase().replace('_', ' ');
+  }
+
   return (
     <div>
       <div className="table-toolbar" style={{ marginBottom: 12 }}>
