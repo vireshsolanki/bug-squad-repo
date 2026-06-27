@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const NAV_ITEMS = [
-  { label: 'Dashboard', href: '/',          icon: '▣' },
-  { label: 'Products',  href: '/products',  icon: '◻' },
-  { label: 'Settings',  href: '/settings',  icon: '⚙' },
+  { label: 'Dashboard', href: '/dashboard',          icon: '▣' },
+  { label: 'Products',  href: '/dashboard/products',  icon: '◻' },
+  { label: 'Settings',  href: '/dashboard/settings',  icon: '⚙' },
 ]
 
 export default function Sidebar() {
@@ -30,7 +30,7 @@ export default function Sidebar() {
           <Link
             key={item.href}
             href={item.href}
-            className={`nav-item ${pathname === item.href ? 'active' : ''}`}
+            className={`nav-item ${pathname.startsWith(item.href) || pathname === item.href ? 'active' : ''}`}
           >
             <span className="nav-icon">{item.icon}</span>
             <span>{item.label}</span>
