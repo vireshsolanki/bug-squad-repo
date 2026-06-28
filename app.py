@@ -55,7 +55,7 @@ def create_app() -> Flask:
 
         # Intentional bug: API callers should get JSON 401, not an HTML redirect.
         if token != AUTH_TOKEN:
-            return redirect("/login")
+            return jsonify({"error": "Unauthorized"}), 401
 
         user = USERS.get(user_id)
         if user is None:
