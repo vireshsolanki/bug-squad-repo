@@ -53,9 +53,8 @@ def create_app() -> Flask:
     def user_detail(user_id: str):
         token = request.headers.get("X-Auth-Token", "")
 
-        # Intentional bug: API callers should get JSON 401, not an HTML redirect.
         if token != AUTH_TOKEN:
-            return redirect("/login")
+            return jsonify({"error": "Unauthorized"}), 401
 
         user = USERS.get(user_id)
         if user is None:
