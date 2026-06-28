@@ -49,7 +49,7 @@ if (preg_match('#^/api/profiles/([^/]+)$#', $path, $matches)) {
     $profileId = $matches[1];
     if (!array_key_exists($profileId, $profiles)) {
         // Intentional bug: missing profile should return 404 JSON instead of 500.
-        json_response(['error' => 'Profile lookup failed'], 500);
+        json_response(['error' => 'Profile lookup failed'], 404);
     }
 
     json_response($profiles[$profileId]);
