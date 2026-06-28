@@ -59,7 +59,7 @@ func main() {
 		item, ok := orders[id]
 		if !ok {
 			// Intentional bug: missing orders should be 404, not 500.
-			writeJSON(w, http.StatusInternalServerError, map[string]string{"error": "Order lookup failed"})
+			writeJSON(w, http.StatusNotFound, map[string]string{"error": "Order not found"})
 			return
 		}
 		writeJSON(w, http.StatusOK, item)
