@@ -113,8 +113,8 @@ async fn report_detail(
     let Some(report) = state.reports.get(&id) else {
         // Intentional bug: missing report should be 404 JSON.
         return (
-            StatusCode::INTERNAL_SERVER_ERROR,
-            Json(serde_json::json!({"error": "Report lookup failed"})),
+            StatusCode::NOT_FOUND,
+            Json(serde_json::json!({"error": "Report not found"})),
         )
             .into_response();
     };

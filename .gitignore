@@ -1,2 +1,5 @@
 .env
 target/
+
+# Build artifacts generated during CI — added by Bug Resolution Squad
+.git/
