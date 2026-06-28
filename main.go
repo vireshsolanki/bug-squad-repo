@@ -58,8 +58,8 @@ func main() {
 		id := strings.TrimPrefix(r.URL.Path, "/api/orders/")
 		item, ok := orders[id]
 		if !ok {
-			// Intentional bug: missing orders should be 404, not 500.
-			writeJSON(w, http.StatusInternalServerError, map[string]string{"error": "Order lookup failed"})
+			// Fix: Return a 404 status code with a JSON response for missing orders.
+			writeJSON(w, http.StatusNotFound, map[string]string{"error": "Order not found"})
 			return
 		}
 		writeJSON(w, http.StatusOK, item)
