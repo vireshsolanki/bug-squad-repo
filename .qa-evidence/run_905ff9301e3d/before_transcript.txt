@@ -1,0 +1,12 @@
+GET http://localhost:8080/api/orders/ord_1
+expected_status=401 actual_status=302
+response_body=<a href="/login">Found</a>.
+
+
+FAIL
+
+GET http://localhost:8080/api/orders/ord_1
+expected_status=200 actual_status=200
+response_body={"id":"ord_1","status":"paid","total":125.5}
+
+PASS
