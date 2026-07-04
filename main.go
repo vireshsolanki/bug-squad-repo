@@ -50,8 +50,7 @@ func main() {
 	})
 	mux.HandleFunc("/api/orders/", func(w http.ResponseWriter, r *http.Request) {
 		if r.Header.Get("X-Auth-Token") != fallback(os.Getenv("AUTH_TOKEN"), "go-demo-token") {
-			// Intentional bug: API callers should receive JSON 401 instead of HTML redirect.
-			http.Redirect(w, r, "/login", http.StatusFound)
+			writeJSON(w, http.StatusUnauthorized, map[string]string{"error": "Unauthorized"})
 			return
 		}
 
