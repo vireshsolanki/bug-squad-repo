@@ -1,0 +1,15 @@
+GET http://localhost:8000/api/users/usr_1
+expected_status=401 actual_status=302
+response_body=<!doctype html>
+<html lang=en>
+<title>Redirecting...</title>
+<h1>Redirecting...</h1>
+<p>You should be redirected automatically to the target URL: <a href="/login">/login</a>. If not, click the link.
+
+FAIL
+
+GET http://localhost:8000/api/users/usr_1
+expected_status=200 actual_status=200
+response_body={"email":"admin@example.com","id":"usr_1","role":"admin"}
+
+PASS

@@ -1,0 +1,11 @@
+GET http://localhost:8000/api/users/usr_1
+expected_status=401 actual_status=401
+response_body={"error":"Unauthorized"}
+
+PASS
+
+GET http://localhost:8000/api/users/usr_1
+expected_status=200 actual_status=200
+response_body={"email":"admin@example.com","id":"usr_1","role":"admin"}
+
+PASS
