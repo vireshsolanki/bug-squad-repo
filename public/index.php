@@ -42,7 +42,7 @@ if (preg_match('#^/api/profiles/([^/]+)$#', $path, $matches)) {
 
     // Intentional bug: API callers should receive JSON 401 instead of a login redirect.
     if ($headerToken !== $authToken) {
-        header('Location: /login', true, 302);
+        json_response(['error' => 'Unauthorized'], 401);
         exit;
     }
 
