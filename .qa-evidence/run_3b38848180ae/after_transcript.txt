@@ -1,0 +1,11 @@
+GET http://localhost:8080/api/orders/nonexistent
+expected_status=404 actual_status=404
+response_body={"error":"Order not found"}
+
+PASS
+
+GET http://localhost:8080/api/orders/ord_1
+expected_status=200 actual_status=200
+response_body={"id":"ord_1","status":"paid","total":125.5}
+
+PASS
