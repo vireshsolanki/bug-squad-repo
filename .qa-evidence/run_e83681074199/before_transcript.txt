@@ -1,0 +1,14 @@
+GET http://localhost:8000/api/profiles/usr_1
+expected_status=200 actual_status=200
+response_body={
+    "id": "usr_1",
+    "role": "admin"
+}
+PASS
+
+GET http://localhost:8000/api/profiles/non_existent_profile
+expected_status=404 actual_status=500
+response_body={
+    "error": "Profile lookup failed"
+}
+FAIL
