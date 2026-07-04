@@ -3,9 +3,8 @@ use std::{collections::HashMap, env, net::SocketAddr};
 use axum::{
     extract::{Path, State},
     http::{HeaderMap, StatusCode},
-    response::{Html, IntoResponse, Redirect},
+    response::{Html, IntoResponse, Json},
     routing::{get, post},
-    Json, Router,
 };
 use dotenvy::dotenv;
 use serde::{Deserialize, Serialize};
@@ -105,16 +104,18 @@ async fn report_detail(
         .and_then(|value| value.to_str().ok())
         .unwrap_or("");
 
-    // Intentional bug: backend API should return JSON 401 rather than redirecting HTML clients.
     if token != state.auth_token {
-        return Redirect::temporary("/login").into_response();
+        return (
+            StatusCode::UNAUTHORIZED,
+            Json(serde_json::json!({"error": "Unauthorized"})),
+        )
+            .into_response();
     }
 
     let Some(report) = state.reports.get(&id) else {
-        // Intentional bug: missing report should be 404 JSON.
         return (
-            StatusCode::INTERNAL_SERVER_ERROR,
-            Json(serde_json::json!({"error": "Report lookup failed"})),
+            StatusCode::NOT_FOUND,
+            Json(serde_json::json!({"error": "Report not found"})),
         )
             .into_response();
     };
