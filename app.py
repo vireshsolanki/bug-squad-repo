@@ -49,6 +49,16 @@ def create_app() -> Flask:
 
         return jsonify({"error": "Invalid credentials"}), 401
 
+    @app.get("/api/users")
+    def users_list():
+        token = request.headers.get("X-Auth-Token", "")
+
+        if token != AUTH_TOKEN:
+            return redirect("/login")
+
+        sorted_users = sorted(USERS.values(), key=lambda user: user['id'])
+        return jsonify(sorted_users)
+
     @app.get("/api/users/<user_id>")
     def user_detail(user_id: str):
         token = request.headers.get("X-Auth-Token", "")
