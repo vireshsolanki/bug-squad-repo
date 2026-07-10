@@ -1,0 +1,14 @@
+API verification auto-remapped localhost port 8000 -> 33527 because the original port was already occupied.
+GET http://localhost:33527/api/users
+headers_used={"Cookie": "***REDACTED***", "X-Auth-Token": "***REDACTED***"}
+expected_status=200 actual_status=200
+response_body=[{"email":"admin@example.com","id":"usr_1","role":"admin"},{"email":"ops@example.com","id":"usr_2","role":"operator"}]
+
+PASS
+
+GET http://localhost:33527/api/users
+headers_used={"Cookie": "***REDACTED***", "X-Auth-Token": "***REDACTED***"}
+expected_status=200 actual_status=200
+response_body=[{"email":"admin@example.com","id":"usr_1","role":"admin"},{"email":"ops@example.com","id":"usr_2","role":"operator"}]
+
+PASS
