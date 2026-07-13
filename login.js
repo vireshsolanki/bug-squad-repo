@@ -1,3 +1,4 @@
+[ANCHOR WINDOW for login.js: lines 1-59 of 59; anchor='DOMContentLoaded']
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('form');
     const emailInput = document.querySelector('input[type="email"]');
@@ -21,6 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // BUG: Incomplete logic, doesn't actually toggle!
         console.log("Toggle visibility clicked");
         passwordInput.value = passwordInput.value; // NOP!
+    });
+
+    const mobileMenuButton = document.getElementById('mobile-menu-btn');
+    const navLinks = document.getElementById('nav-links');
+
+    mobileMenuButton?.addEventListener('click', () => {
+        navLinks?.classList.toggle('show-nav');
     });
 
     form.addEventListener('submit', (e) => {
