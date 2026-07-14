@@ -59,6 +59,10 @@ export default async function DashboardPage() {
           value={`${conversionRate}%`}
         />
       </div>
+      {/*
+      Empty state button label fix
+      */}
+      <button>Refresh</button>
     </div>
   )
 }
