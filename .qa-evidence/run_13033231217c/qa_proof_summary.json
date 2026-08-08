@@ -1,0 +1,43 @@
+{
+  "passed": false,
+  "bug_surface": "frontend",
+  "failure_reason": "Evidence gate failed: local screenshot missing or blank",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "deterministic_search_source_check",
+    "scenario_count": 0,
+    "snapshot_path": "data/artifacts/runs/run_13033231217c/before_after_snapshot.md",
+    "transcripts": {}
+  },
+  "validation": {
+    "addresses_bug": false,
+    "targets_root_cause": false,
+    "confidence": "low",
+    "reasoning": "Failed to parse validation response and heuristics were inconclusive."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": true,
+      "passed": false,
+      "command": "npm test"
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [],
+    "visual_manifest_paths": [],
+    "evidence_gate": {
+      "evidence_valid": false,
+      "local_valid": false,
+      "github_valid": true,
+      "needs_evidence": false,
+      "reasons": [
+        "local screenshot missing or blank"
+      ]
+    }
+  }
+}
