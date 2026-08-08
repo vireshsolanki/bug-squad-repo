@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "bug_surface": "frontend",
+  "failure_reason": "TechLead exact_fix was applied and verified deterministically.",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "exact_fix_diff_verification",
+    "scenario_count": 3,
+    "snapshot_path": "data/artifacts/runs/run_ddb64888d21b/before_after_snapshot.md",
+    "transcripts": {}
+  },
+  "validation": {
+    "addresses_bug": true,
+    "targets_root_cause": true,
+    "confidence": "high",
+    "reasoning": "TechLead exact_fix was applied and verified deterministically."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": true,
+      "passed": false,
+      "command": "npm test"
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [
+      "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_ddb64888d21b/screenshots/before.png",
+      "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_ddb64888d21b/screenshots/after.png"
+    ],
+    "visual_manifest_paths": [
+      "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_ddb64888d21b/qa_visual_evidence.json"
+    ],
+    "evidence_gate": {
+      "evidence_valid": true,
+      "local_valid": true,
+      "github_valid": true,
+      "needs_evidence": false,
+      "reasons": []
+    }
+  }
+}
