@@ -1,0 +1,18 @@
+{
+  "run_id": "run_2d0b83b0ea91",
+  "repo_owner": "vireshsolanki",
+  "repo_name": "bug-squad-repo",
+  "branch_name": "pending-commit",
+  "pr_number": null,
+  "produced_at": "2026-08-08T21:01:40.110513+00:00",
+  "expected_sha": "<pending-fetch>",
+  "head_sha": "<pending-fetch>",
+  "evidence_paths": {
+    "github_before": null,
+    "github_after": null,
+    "qa_evidence_dir": ".qa-evidence/run_2d0b83b0ea91",
+    "qa_proof_summary": ".qa-evidence/run_2d0b83b0ea91/qa_proof_summary.json",
+    "before_after_snapshot": ".qa-evidence/run_2d0b83b0ea91/before_after_snapshot.md"
+  },
+  "diagnostics": {}
+}
