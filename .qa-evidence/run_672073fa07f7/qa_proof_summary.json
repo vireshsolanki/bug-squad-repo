@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "bug_surface": "api",
+  "failure_reason": "The patch.diff correctly addresses the reported bug by returning a JSON 401 response for unauthenticated API callers instead of redirecting to /login.",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "api_test_deterministic",
+    "scenario_count": 1,
+    "snapshot_path": "data/artifacts/runs/run_672073fa07f7/before_after_snapshot.md",
+    "transcripts": {
+      "before": "data/artifacts/runs/run_672073fa07f7/api_evidence/before_transcript.txt",
+      "after": "data/artifacts/runs/run_672073fa07f7/api_evidence/after_transcript.txt"
+    }
+  },
+  "validation": {
+    "addresses_bug": true,
+    "targets_root_cause": true,
+    "confidence": "high",
+    "reasoning": "The patch.diff correctly addresses the reported bug by returning a JSON 401 response for unauthenticated API callers instead of redirecting to /login."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": false,
+      "passed": false,
+      "command": ""
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [],
+    "visual_manifest_paths": [],
+    "evidence_gate": null
+  }
+}
