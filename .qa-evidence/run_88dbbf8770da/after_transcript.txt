@@ -1,0 +1,6 @@
+GET http://localhost:8000/api/users/usr_1
+headers_used={"Cookie": "***REDACTED***", "X-Auth-Token": "***REDACTED***"}
+expected_status=200 actual_status=200
+response_body={"email":"admin@example.com","id":"usr_1","role":"admin"}
+
+PASS
