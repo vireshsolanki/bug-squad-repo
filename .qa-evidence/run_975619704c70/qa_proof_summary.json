@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "bug_surface": "api",
+  "failure_reason": "The original code returned a redirect for unauthenticated API calls, which is exactly the behavior reported. The patch replaces that redirect with a JSON 401 response, directly matching the issue specification. No other files were modified, so the change is scoped strictly to the reported bug. The new response uses Flask's jsonify, preserving correct content\u2011type and status code. No syntax shortcuts were introduced.",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "api_test_deterministic",
+    "scenario_count": 1,
+    "snapshot_path": "data/artifacts/runs/run_975619704c70/before_after_snapshot.md",
+    "transcripts": {
+      "before": "data/artifacts/runs/run_975619704c70/api_evidence/before_transcript.txt",
+      "after": "data/artifacts/runs/run_975619704c70/api_evidence/after_transcript.txt"
+    }
+  },
+  "validation": {
+    "addresses_bug": true,
+    "targets_root_cause": true,
+    "confidence": "high",
+    "reasoning": "The original code returned a redirect for unauthenticated API calls, which is exactly the behavior reported. The patch replaces that redirect with a JSON 401 response, directly matching the issue specification. No other files were modified, so the change is scoped strictly to the reported bug. The new response uses Flask's jsonify, preserving correct content\u2011type and status code. No syntax shortcuts were introduced."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": false,
+      "passed": false,
+      "command": ""
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [],
+    "visual_manifest_paths": [],
+    "evidence_gate": null
+  }
+}
