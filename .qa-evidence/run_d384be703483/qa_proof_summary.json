@@ -18,9 +18,9 @@
   },
   "tests": {
     "existing_suite": {
-      "ran": true,
+      "ran": false,
       "passed": false,
-      "command": "npm test"
+      "command": ""
     },
     "developer_rerun": {
       "ran": false,
