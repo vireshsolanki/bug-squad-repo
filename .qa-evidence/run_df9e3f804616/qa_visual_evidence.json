@@ -10,5 +10,17 @@
     "before": "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_df9e3f804616/screenshots/before.png",
     "before_annotated": "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_df9e3f804616/screenshots/before_annotated.png",
     "scenario": "before"
+  },
+  {
+    "after": "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_df9e3f804616/screenshots/github_after.png",
+    "after_annotated": "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_df9e3f804616/screenshots/github_after_annotated.png",
+    "bbox_found": true,
+    "scenario": "github_after"
+  },
+  {
+    "after": "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_df9e3f804616/screenshots/github_before.png",
+    "after_annotated": "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_df9e3f804616/screenshots/github_before_annotated.png",
+    "bbox_found": true,
+    "scenario": "github_before"
   }
 ]
