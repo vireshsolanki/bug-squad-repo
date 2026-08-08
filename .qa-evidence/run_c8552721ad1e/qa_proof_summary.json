@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "bug_surface": "api",
+  "failure_reason": "The original bug returned an HTML redirect for unauthenticated API calls. The diff replaces `redirect(\"/login\")` with `jsonify({\"error\": \"Authentication required\"}), 401`, which directly addresses the root cause by sending a proper JSON 401 response. No other files were touched, no lazy placeholders were introduced, and the login page remains unchanged.",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "api_test_deterministic",
+    "scenario_count": 1,
+    "snapshot_path": "data/artifacts/runs/run_c8552721ad1e/before_after_snapshot.md",
+    "transcripts": {
+      "before": "data/artifacts/runs/run_c8552721ad1e/api_evidence/before_transcript.txt",
+      "after": "data/artifacts/runs/run_c8552721ad1e/api_evidence/after_transcript.txt"
+    }
+  },
+  "validation": {
+    "addresses_bug": true,
+    "targets_root_cause": true,
+    "confidence": "high",
+    "reasoning": "The original bug returned an HTML redirect for unauthenticated API calls. The diff replaces `redirect(\"/login\")` with `jsonify({\"error\": \"Authentication required\"}), 401`, which directly addresses the root cause by sending a proper JSON 401 response. No other files were touched, no lazy placeholders were introduced, and the login page remains unchanged."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": false,
+      "passed": false,
+      "command": ""
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [],
+    "visual_manifest_paths": [],
+    "evidence_gate": null
+  }
+}
