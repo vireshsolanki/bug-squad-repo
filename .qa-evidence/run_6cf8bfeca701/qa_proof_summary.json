@@ -1,0 +1,43 @@
+{
+  "passed": false,
+  "bug_surface": "frontend",
+  "failure_reason": "Evidence gate failed: local screenshot missing or blank",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "deterministic_search_source_check",
+    "scenario_count": 0,
+    "snapshot_path": "data/artifacts/runs/run_6cf8bfeca701/before_after_snapshot.md",
+    "transcripts": {}
+  },
+  "validation": {
+    "addresses_bug": true,
+    "targets_root_cause": true,
+    "confidence": "high",
+    "reasoning": "The diff adds a client\u2011side state hook and filters the product list using `product.name.toLowerCase().includes(searchTerm.toLowerCase())`, which directly removes the case\u2011sensitivity that caused the bug. The change is confined to the only file allowed by the Tech Lead scope, so no unrelated code is touched. However, the fix assumes that `SearchBar` calls its `onSearch` prop with a plain string; if the component instead supplies an event object or a different payload, `setSearchTerm` will receive an unexpected type and cause a runtime error. Converting the page to a client component also changes its rendering model, which could have performance implications but does not affect the immediate functionality."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": true,
+      "passed": false,
+      "command": "npm test"
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [],
+    "visual_manifest_paths": [],
+    "evidence_gate": {
+      "evidence_valid": false,
+      "local_valid": false,
+      "github_valid": true,
+      "needs_evidence": false,
+      "reasons": [
+        "local screenshot missing or blank"
+      ]
+    }
+  }
+}
