@@ -1,0 +1,45 @@
+{
+  "passed": false,
+  "bug_surface": "frontend",
+  "failure_reason": "Evidence gate failed: local screenshot missing or blank",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "exact_fix_diff_verification",
+    "scenario_count": 2,
+    "snapshot_path": "data/artifacts/runs/run_7b7adb0eb79b/before_after_snapshot.md",
+    "transcripts": {}
+  },
+  "validation": {
+    "addresses_bug": true,
+    "targets_root_cause": true,
+    "confidence": "high",
+    "reasoning": "TechLead exact_fix was applied and verified deterministically."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": false,
+      "passed": false,
+      "command": ""
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [],
+    "visual_manifest_paths": [
+      "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_7b7adb0eb79b/qa_visual_evidence.json"
+    ],
+    "evidence_gate": {
+      "evidence_valid": false,
+      "local_valid": false,
+      "github_valid": true,
+      "needs_evidence": false,
+      "reasons": [
+        "local screenshot missing or blank"
+      ]
+    }
+  }
+}
