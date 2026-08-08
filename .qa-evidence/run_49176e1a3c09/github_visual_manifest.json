@@ -1,0 +1,56 @@
+{
+  "run_id": "run_49176e1a3c09",
+  "repo_owner": "vireshsolanki",
+  "repo_name": "bug-squad-repo",
+  "branch_name": "pending-commit",
+  "pr_number": null,
+  "produced_at": "2026-08-08T20:03:25.448316+00:00",
+  "expected_sha": "<pending-fetch>",
+  "head_sha": "<pending-fetch>",
+  "evidence_paths": {
+    "github_before": "screenshots/github_before.png",
+    "github_after": null,
+    "qa_evidence_dir": ".qa-evidence/run_49176e1a3c09",
+    "qa_proof_summary": ".qa-evidence/run_49176e1a3c09/qa_proof_summary.json",
+    "before_after_snapshot": ".qa-evidence/run_49176e1a3c09/before_after_snapshot.md"
+  },
+  "diagnostics": {
+    "body_excerpt": "Welcome\nBack\nSign\nin\nto\nyour\nNexus\naccount\nEMAIL\nADDRESS\nPASSWORD\nMinumum\n8\ncharacters\nSign\nIn\nDon't\nhave\nan\naccount?\nRequest\naccess",
+    "field": {
+      "id": "password",
+      "name": "",
+      "placeholder": "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+      "tag": "input",
+      "type": "text"
+    },
+    "final_url": "http://localhost:3000/login?from=%2Fproducts",
+    "locator_found": true,
+    "locator_requested": false,
+    "looks_like_404": false,
+    "matched_selector": "#password",
+    "redirected": true,
+    "sample_value_applied": true,
+    "target_url": "http://localhost:3000/products",
+    "title": "Nexus Dashboard",
+    "before": {
+      "body_excerpt": "Welcome\nBack\nSign\nin\nto\nyour\nNexus\naccount\nEMAIL\nADDRESS\nPASSWORD\nMinumum\n8\ncharacters\nSign\nIn\nDon't\nhave\nan\naccount?\nRequest\naccess",
+      "field": {
+        "id": "password",
+        "name": "",
+        "placeholder": "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+        "tag": "input",
+        "type": "text"
+      },
+      "final_url": "http://localhost:3000/login?from=%2Fproducts",
+      "locator_found": true,
+      "locator_requested": false,
+      "looks_like_404": false,
+      "matched_selector": "#password",
+      "redirected": true,
+      "sample_value_applied": true,
+      "target_url": "http://localhost:3000/products",
+      "title": "Nexus Dashboard"
+    },
+    "after": {}
+  }
+}
