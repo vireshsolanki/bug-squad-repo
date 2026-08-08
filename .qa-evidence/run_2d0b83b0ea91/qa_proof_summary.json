@@ -1,0 +1,46 @@
+{
+  "passed": false,
+  "bug_surface": "frontend",
+  "failure_reason": "Evidence gate failed: local before screenshot missing or blank; local after screenshot missing or blank",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "playwright_unrelated_failure_source_fallback",
+    "scenario_count": 2,
+    "snapshot_path": "data/artifacts/runs/run_2d0b83b0ea91/before_after_snapshot.md",
+    "transcripts": {}
+  },
+  "validation": {
+    "addresses_bug": true,
+    "targets_root_cause": true,
+    "confidence": "high",
+    "reasoning": "Deterministic source fallback passed after an unrelated Playwright/runtime failure, and no actionable critical issue was found in the changed files."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": true,
+      "passed": false,
+      "command": "npm test"
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [],
+    "visual_manifest_paths": [
+      "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_2d0b83b0ea91/qa_visual_evidence.json"
+    ],
+    "evidence_gate": {
+      "evidence_valid": false,
+      "local_valid": false,
+      "github_valid": true,
+      "needs_evidence": false,
+      "reasons": [
+        "local before screenshot missing or blank",
+        "local after screenshot missing or blank"
+      ]
+    }
+  }
+}
