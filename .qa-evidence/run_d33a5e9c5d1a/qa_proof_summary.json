@@ -1,0 +1,44 @@
+{
+  "passed": false,
+  "bug_surface": "frontend",
+  "failure_reason": "Evidence gate failed: local after screenshot missing or blank; local before/after target did not change",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "playwright_compile_failed_source_fallback",
+    "scenario_count": 2,
+    "snapshot_path": "data/artifacts/runs/run_d33a5e9c5d1a/before_after_snapshot.md",
+    "transcripts": {}
+  },
+  "validation": {
+    "addresses_bug": true,
+    "targets_root_cause": true,
+    "confidence": "high",
+    "reasoning": "The patch introduces a searchQuery state and filters the products array using a case\u2011insensitive comparison (`toLowerCase`). The SearchBar\u2019s `onSearch` prop now updates this state, and the ProductTable receives the filtered list. This directly resolves the reported case\u2011sensitive search issue and does not alter any unrelated filtering, sorting, or pagination logic."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": true,
+      "passed": false,
+      "command": "npm test"
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [],
+    "visual_manifest_paths": [],
+    "evidence_gate": {
+      "evidence_valid": false,
+      "local_valid": false,
+      "github_valid": true,
+      "needs_evidence": false,
+      "reasons": [
+        "local after screenshot missing or blank",
+        "local before/after target did not change"
+      ]
+    }
+  }
+}
