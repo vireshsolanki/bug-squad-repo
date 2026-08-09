@@ -1,0 +1,22 @@
+{
+  "auth_cookies_present": true,
+  "body_excerpt": "N\nNexus\n\u25a3\nDashboard\n\u25fb\nProducts\n\u2699\nSettings\n\u238b\nSign\nOut\nwelcome\nBack\nHere's\nwhat's\nhappening\nwith\nyour\nstore\ntoday.\nTOTAL\nREVENUE\n$48,320.50\n\u2191\n12.5%\nvs\nlast\nmonth\nTOTAL\nORDERS\n1,284\n\u2193\n3.2%\nvs\nlast\nmonth\nACTIVE\nUSERS\n3,621\nCONVERSION\nRATE\n35.5%",
+  "field": {
+    "id": "",
+    "name": "",
+    "placeholder": "",
+    "tag": "h1",
+    "type": ""
+  },
+  "final_url": "http://localhost:3000/",
+  "locator_found": true,
+  "locator_requested": true,
+  "login_body_excerpt": "{\"success\":true,\"userId\":\"usr_1\"}",
+  "login_status": 200,
+  "looks_like_404": false,
+  "matched_selector": "h1",
+  "redirected": false,
+  "sample_value_applied": false,
+  "target_url": "http://localhost:3000/",
+  "title": "Nexus Dashboard"
+}
