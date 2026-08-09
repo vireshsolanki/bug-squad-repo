@@ -1,0 +1,19 @@
+{
+  "body_excerpt": "Welcome\nBack\nSign\nin\nto\nyour\nNexus\naccount\nEMAIL\nADDRESS\nPASSWORD\nMinumum\n8\ncharacters\nSign\nIn\nDon't\nhave\nan\naccount?\nRequest\naccess",
+  "field": {
+    "id": "",
+    "name": "",
+    "placeholder": "",
+    "tag": "h1",
+    "type": ""
+  },
+  "final_url": "http://localhost:3000/login?from=%2F",
+  "locator_found": true,
+  "locator_requested": true,
+  "looks_like_404": false,
+  "matched_selector": "h1",
+  "redirected": true,
+  "sample_value_applied": false,
+  "target_url": "http://localhost:3000/",
+  "title": "Nexus Dashboard"
+}
