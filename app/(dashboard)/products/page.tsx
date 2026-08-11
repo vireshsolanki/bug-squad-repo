@@ -1,3 +1,5 @@
+'use client'
+
 import productsData from '@/data/products.json'
 import ProductTable from '@/components/dashboard/ProductTable'
 import SearchBar from '@/components/dashboard/SearchBar'

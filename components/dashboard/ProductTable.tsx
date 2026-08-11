@@ -38,8 +38,8 @@ export default function ProductTable({ products }: ProductTableProps) {
       <div className="table-toolbar" style={{ marginBottom: 12 }}>
         <FilterBar
           categories={categories}
-          onCategoryChange={(e: React.ChangeEvent<HTMLInputElement>) => setCategory(e.target.value)}
-          onStatusChange={(e: React.ChangeEvent<HTMLInputElement>) => setStatusFilter(e.target.value as StatusFilter)}
+          onCategoryChange={(e: React.ChangeEvent<HTMLSelectElement>) => setCategory(e.target.value)}
+          onStatusChange={(e: React.ChangeEvent<HTMLSelectElement>) => setStatusFilter(e.target.value as StatusFilter)}
         />
         <select
           value={sortOrder}

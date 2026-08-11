@@ -59,6 +59,13 @@ export default async function DashboardPage() {
           value={`${conversionRate}%`}
         />
       </div>
+
+      <div className="empty-state dashboard-empty-state">
+        <p>No recent activity yet.</p>
+        <button type="button" className="empty-state-btn">
+          Refesh
+        </button>
+      </div>
     </div>
   )
 }

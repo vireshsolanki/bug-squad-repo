@@ -30,7 +30,7 @@ export default function Sidebar() {
           <Link
             key={item.href}
             href={item.href}
-            className={`nav-item ${pathname === item.href ? 'active' : ''}`}
+            className={`nav-item ${pathname.startsWith(item.href) ? 'active' : ''}`}
           >
             <span className="nav-icon">{item.icon}</span>
             <span>{item.label}</span>
