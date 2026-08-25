@@ -1,0 +1,14 @@
+[
+  {
+    "after": "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_d52ebfed1d8b/screenshots/after.png",
+    "after_annotated": "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_d52ebfed1d8b/screenshots/after_annotated.png",
+    "bbox_found": true,
+    "scenario": "after"
+  },
+  {
+    "bbox_found": true,
+    "before": "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_d52ebfed1d8b/screenshots/before.png",
+    "before_annotated": "/home/viresh/Electromech/personal/product/Vteam/bug-resolution-squad/data/artifacts/runs/run_d52ebfed1d8b/screenshots/before_annotated.png",
+    "scenario": "before"
+  }
+]
