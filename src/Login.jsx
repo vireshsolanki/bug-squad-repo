@@ -6,7 +6,6 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // BUG #1: Hardcoded URL instead of using import.meta.env.VITE_API_URL
     console.log("Authenticating with: http://localhost:8080/api/login");
     console.log("Data:", { email, password });
   };
@@ -30,10 +29,9 @@ const Login = () => {
         
         <div className="form-group">
           <label htmlFor="password">Password</label>
-          {/* BUG #2: type="text" instead of "password" */}
           <input 
             id="password"
-            type="text" 
+            type="password" 
             placeholder="••••••••" 
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -41,7 +39,7 @@ const Login = () => {
         </div>
         
         <button type="submit" className="login-btn">
-          Sign In
+          Sign in
         </button>
       </form>
       
