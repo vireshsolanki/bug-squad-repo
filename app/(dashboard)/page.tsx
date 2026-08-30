@@ -33,7 +33,7 @@ export default async function DashboardPage() {
     <div>
       <div className="dashboard-header">
         <div>
-          <h1 className="page-title">welcome Back</h1>
+          <h1 className="page-title">Welcome Back</h1>
           <p className="page-subtitle">Here&apos;s what&apos;s happening with your store today.</p>
         </div>
         <UserCard userId={userId} />
