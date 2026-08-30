@@ -2,13 +2,19 @@ import React, { useState, useEffect } from 'react';
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     // Simulating API fetch
     setTimeout(() => {
       setData({ users: 44, uptime: '99.9%' });
+      setIsLoading(false); // Set isLoading to false after data is fetched
     }, 1000);
   }, []);
+
+  if (isLoading) {
+    return <div>Loading...</div>; // Render "Loading..." while data is being fetched
+  }
 
   return (
     <div className="dashboard-card" style={{ marginTop: '20px', padding: '20px', background: 'rgba(255,255,255,0.05)', borderRadius: '12px' }}>
