@@ -1,0 +1,43 @@
+{
+  "passed": false,
+  "bug_surface": "frontend",
+  "failure_reason": "Evidence gate failed: local screenshot missing or blank",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "deterministic_search_source_check",
+    "scenario_count": 0,
+    "snapshot_path": "data/artifacts/runs/run_caeedf14e832/before_after_snapshot.md",
+    "transcripts": {}
+  },
+  "validation": {
+    "addresses_bug": true,
+    "targets_root_cause": true,
+    "confidence": "high",
+    "reasoning": "The diff replaces the case\u2011sensitive `includes` call with a lower\u2011cased comparison, which directly resolves the reported bug of case sensitivity in product name filtering. No other code paths are altered, preserving the original filtering logic for category, status, and sorting. The change is syntactically correct and does not introduce new runtime errors."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": true,
+      "passed": false,
+      "command": "npm test"
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [],
+    "visual_manifest_paths": [],
+    "evidence_gate": {
+      "evidence_valid": false,
+      "local_valid": false,
+      "github_valid": true,
+      "needs_evidence": false,
+      "reasons": [
+        "local screenshot missing or blank"
+      ]
+    }
+  }
+}
