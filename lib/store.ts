@@ -1,11 +1,12 @@
 'use client'
 
 import { create } from 'zustand'
-import type { Product, CartItem } from './types'
+import type { Product, CartItem, User } from './types'
 
 interface StoreState {
   products: Product[]
   cart: CartItem[]
+  users: User[] // Assuming User type is defined and includes role
   loading: boolean
   error: string | null
   fetchProducts: () => Promise<void>
@@ -13,11 +14,14 @@ interface StoreState {
   removeFromCart: (id: string) => void
   clearCart: () => void
   logout: () => void
+  // Hypothetical function to filter users by role
+  filterUsersByRole: (role: string) => User[]
 }
 
 export const useStore = create<StoreState>((set, get) => ({
   products: [],
   cart: [],
+  users: [], // Initialize users
   loading: false,
   error: null,
 
@@ -47,5 +51,10 @@ export const useStore = create<StoreState>((set, get) => ({
 
   logout: () => {
     set({ products: [], error: null })
+  },
+
+  // Hypothetical function to filter users
+  filterUsersByRole: (role: string) => {
+    return get().users.filter(user => user.role.includes(role) || user.role === 'manager')
   },
 }))
