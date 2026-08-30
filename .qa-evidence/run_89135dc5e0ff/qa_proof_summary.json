@@ -1,0 +1,43 @@
+{
+  "passed": false,
+  "bug_surface": "frontend",
+  "failure_reason": "Evidence gate failed: local screenshot missing or blank",
+  "verification": {
+    "ran": true,
+    "passed": true,
+    "method": "deterministic_search_source_check",
+    "scenario_count": 0,
+    "snapshot_path": "data/artifacts/runs/run_89135dc5e0ff/before_after_snapshot.md",
+    "transcripts": {}
+  },
+  "validation": {
+    "addresses_bug": true,
+    "targets_root_cause": true,
+    "confidence": "high",
+    "reasoning": "The diff replaces a case\u2011sensitive .includes() check with a case\u2011insensitive one by lowercasing both the product name and the search query. This directly addresses the reported issue and does not modify any unrelated code. The change keeps the original filter ordering and logic intact, so adjacent logic is preserved. No new functional regressions are introduced, though a minor style issue (missing newline at EOF) and a potential performance hit on large datasets are noted."
+  },
+  "tests": {
+    "existing_suite": {
+      "ran": true,
+      "passed": false,
+      "command": "npm test"
+    },
+    "developer_rerun": {
+      "ran": false,
+      "passed": false
+    }
+  },
+  "evidence": {
+    "screenshots": [],
+    "visual_manifest_paths": [],
+    "evidence_gate": {
+      "evidence_valid": false,
+      "local_valid": false,
+      "github_valid": true,
+      "needs_evidence": false,
+      "reasons": [
+        "local screenshot missing or blank"
+      ]
+    }
+  }
+}
