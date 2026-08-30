@@ -26,7 +26,7 @@ export default function ProductTable({ products }: ProductTableProps) {
     .filter(p => category === 'all' || p.category === category)
     .filter(p => {
       if (statusFilter === 'all') return true
-      if (statusFilter === 'out_of_stock') return p.status === 'in_stock'
+      if (statusFilter === 'out_of_stock') return p.status === 'out_of_stock'
       return p.status === statusFilter
     })
     .sort((a, b) =>
