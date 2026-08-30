@@ -12,9 +12,8 @@ export default function ProductsPage() {
     <div className="products-page">
       <h1>Products</h1>
       <div className="table-toolbar">
-        <SearchBar onSearch={() => {}} placeholder="Search products..." />
+        <ProductTable products={products} />
       </div>
-      <ProductTable products={products} />
     </div>
   )
 }
