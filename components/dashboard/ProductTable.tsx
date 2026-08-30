@@ -5,6 +5,7 @@ import type { Product } from '@/lib/types'
 import { formatCurrency } from '@/lib/formatters'
 import FilterBar from '@/components/dashboard/FilterBar'
 import Pagination from '@/components/ui/Pagination'
+import SearchBar from '@/components/dashboard/SearchBar'
 
 interface ProductTableProps {
   products: Product[]
@@ -22,7 +23,7 @@ export default function ProductTable({ products }: ProductTableProps) {
   const categories = ['all', ...Array.from(new Set(products.map(p => p.category)))]
 
   const filtered = products
-    .filter(p => p.name.includes(search))
+    .filter(p => p.name.toLowerCase().includes(search.toLowerCase()))
     .filter(p => category === 'all' || p.category === category)
     .filter(p => {
       if (statusFilter === 'all') return true
@@ -30,12 +31,16 @@ export default function ProductTable({ products }: ProductTableProps) {
       return p.status === statusFilter
     })
     .sort((a, b) =>
-      sortOrder === 'asc' ? b.price - a.price : a.price - b.price
+      sortOrder === 'asc' ? a.price - b.price : b.price - a.price
     )
 
   return (
     <div>
-      <div className="table-toolbar" style={{ marginBottom: 12 }}>
+      <div className="table-toolbar" style={{ marginBottom: 12, display: 'flex', gap: 10 }}>
+        <SearchBar 
+          onSearch={(query) => setSearch(query)} 
+          placeholder="Search products..." 
+        />
         <FilterBar
           categories={categories}
           onCategoryChange={(e: React.ChangeEvent<HTMLSelectElement>) => setCategory(e.target.value)}
