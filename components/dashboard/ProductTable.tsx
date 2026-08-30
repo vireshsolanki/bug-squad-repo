@@ -30,7 +30,7 @@ export default function ProductTable({ products }: ProductTableProps) {
       return p.status === statusFilter
     })
     .sort((a, b) =>
-      sortOrder === 'asc' ? b.price - a.price : a.price - b.price
+      sortOrder === 'asc' ? a.price - b.price : b.price - a.price
     )
 
   return (
