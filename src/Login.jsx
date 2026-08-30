@@ -30,10 +30,10 @@ const Login = () => {
         
         <div className="form-group">
           <label htmlFor="password">Password</label>
-          {/* BUG #2: type="text" instead of "password" */}
+          {/* BUG #2: type="password" instead of "password" */}
           <input 
             id="password"
-            type="text" 
+            type="password" 
             placeholder="••••••••" 
             value={password}
             onChange={(e) => setPassword(e.target.value)}
