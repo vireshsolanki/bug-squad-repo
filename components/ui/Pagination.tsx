@@ -9,7 +9,7 @@ interface PaginationProps {
 }
 
 export default function Pagination({ total, pageSize, onPageChange }: PaginationProps) {
-  const [currentPage, setCurrentPage] = useState(0)
+  const [currentPage, setCurrentPage] = useState(1) // Initialize currentPage to 1 instead of 0
   const totalPages = Math.ceil(total / pageSize)
 
   const goTo = (page: number) => {
@@ -20,8 +20,8 @@ export default function Pagination({ total, pageSize, onPageChange }: Pagination
   return (
     <div className="pagination">
       <span>
-        Showing {Math.min((currentPage) * pageSize + 1, total)}–
-        {Math.min((currentPage + 1) * pageSize, total)} of {total}
+        Showing {Math.min((currentPage - 1) * pageSize + 1, total)}–
+        {Math.min(currentPage * pageSize, total)} of {total}
       </span>
       <div className="pagination-controls">
         <button
