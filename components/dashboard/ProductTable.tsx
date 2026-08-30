@@ -33,6 +33,14 @@ export default function ProductTable({ products }: ProductTableProps) {
       sortOrder === 'asc' ? b.price - a.price : a.price - b.price
     )
 
+  const capitalizeStatus = (status: string) => {
+    const labelMap: { [key: string]: string } = {
+      'in_stock': 'In stock',
+      'out_of_stock': 'Out of stock'
+    }
+    return labelMap[status] || status
+  }
+
   return (
     <div>
       <div className="table-toolbar" style={{ marginBottom: 12 }}>
@@ -85,7 +93,7 @@ export default function ProductTable({ products }: ProductTableProps) {
                   </td>
                   <td>
                     <span className={`status-badge status-${p.status}`}>
-                      {p.status === 'in_stock' ? '● In stock' : '● Out of stock'}
+                      {capitalizeStatus(p.status)}
                     </span>
                   </td>
                 </tr>
