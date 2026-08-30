@@ -1,0 +1,7 @@
+GET http://localhost:3000/api/products/prod_1 -> 401
+PASS
+GET http://localhost:3000/api/products/prod_1 -> 401
+PASS
+GET http://localhost:3000/api/products/non_existent_product -> 401
+PASS
+All scenarios passed

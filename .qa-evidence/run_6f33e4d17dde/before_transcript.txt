@@ -1,0 +1,4 @@
+FAIL: [Errno 111] Connection refused
+FAIL: [Errno 111] Connection refused
+FAIL: [Errno 111] Connection refused
+Some scenarios failed
