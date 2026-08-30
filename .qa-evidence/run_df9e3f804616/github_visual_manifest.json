@@ -1,0 +1,74 @@
+{
+  "run_id": "run_df9e3f804616",
+  "repo_owner": "vireshsolanki",
+  "repo_name": "bug-squad-repo",
+  "branch_name": "pending-commit",
+  "pr_number": null,
+  "produced_at": "2026-08-08T18:29:38.891406+00:00",
+  "expected_sha": "<pending-fetch>",
+  "head_sha": "<pending-fetch>",
+  "evidence_paths": {
+    "github_before": "screenshots/github_before.png",
+    "github_after": "screenshots/github_after.png",
+    "qa_evidence_dir": ".qa-evidence/run_df9e3f804616",
+    "qa_proof_summary": ".qa-evidence/run_df9e3f804616/qa_proof_summary.json",
+    "before_after_snapshot": ".qa-evidence/run_df9e3f804616/before_after_snapshot.md"
+  },
+  "diagnostics": {
+    "body_excerpt": "Welcome\nBack\nSign\nin\nto\nyour\nNexus\naccount\nEMAIL\nADDRESS\nPASSWORD\nMinumum\n8\ncharacters\nSign\nIn\nDon't\nhave\nan\naccount?\nRequest\naccess",
+    "field": {
+      "id": "password",
+      "name": "",
+      "placeholder": "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+      "tag": "input",
+      "type": "password"
+    },
+    "final_url": "http://localhost:3000/login",
+    "locator_found": true,
+    "locator_requested": true,
+    "looks_like_404": false,
+    "matched_selector": "#password",
+    "redirected": false,
+    "sample_value_applied": true,
+    "target_url": "http://localhost:3000/login",
+    "title": "Nexus Dashboard",
+    "before": {
+      "body_excerpt": "Welcome\nBack\nSign\nin\nto\nyour\nNexus\naccount\nEMAIL\nADDRESS\nPASSWORD\nMinumum\n8\ncharacters\nSign\nIn\nDon't\nhave\nan\naccount?\nRequest\naccess",
+      "field": {
+        "id": "password",
+        "name": "",
+        "placeholder": "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+        "tag": "input",
+        "type": "text"
+      },
+      "final_url": "http://localhost:3000/login",
+      "locator_found": true,
+      "locator_requested": true,
+      "looks_like_404": false,
+      "matched_selector": "#password",
+      "redirected": false,
+      "sample_value_applied": true,
+      "target_url": "http://localhost:3000/login",
+      "title": "Nexus Dashboard"
+    },
+    "after": {
+      "body_excerpt": "Welcome\nBack\nSign\nin\nto\nyour\nNexus\naccount\nEMAIL\nADDRESS\nPASSWORD\nMinumum\n8\ncharacters\nSign\nIn\nDon't\nhave\nan\naccount?\nRequest\naccess",
+      "field": {
+        "id": "password",
+        "name": "",
+        "placeholder": "\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022",
+        "tag": "input",
+        "type": "password"
+      },
+      "final_url": "http://localhost:3000/login",
+      "locator_found": true,
+      "locator_requested": true,
+      "looks_like_404": false,
+      "matched_selector": "#password",
+      "redirected": false,
+      "sample_value_applied": true,
+      "target_url": "http://localhost:3000/login",
+      "title": "Nexus Dashboard"
+    }
+  }
+}
