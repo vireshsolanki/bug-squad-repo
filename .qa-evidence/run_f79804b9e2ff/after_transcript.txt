@@ -1,0 +1,17 @@
+GET http://localhost:3000/api/products
+headers_used={}
+expected_status=200 actual_status=200
+response_body=[{"id":"prod_001","name":"iPhone 15 Pro","price":999.99,"stock":45,"category":"Electronics","status":"in_stock","sku":"APL-IP15P","createdAt":"2024-01-10"},{"id":"prod_002","name":"Samsung Galaxy S24","price":849.99,"stock":32,"category":"Electronics","status":"in_stock","sku":"SAM-GS24","createdAt":"2024-01-12"},{"id":"prod_003","name":"MacBook Pro M3","price":1999,"stock":0,"category":"Computers","status":"out_of_stock","sku":"APL-MBP-M3","createdAt":"2024-01-05"},{"id":"prod_004","name":"Sony WH-1000XM5 Headphones","price":279.99,"stock":78,"category":"Audio","status":"in_stock","sku":"SNY-WH1000","createdAt":"2024-01-20"},{"id":"prod_005","name":"Dell XPS 15 Laptop","price":1549,"stock":0,"category":"Computers","status":"out_of_stock","sku":"DLL-XPS15","createdAt":"2024-01-08"},{"id":"prod_006","name":"iPad Air (5th Gen)","price":599.99,"stock":120,"category":"Electronics","status":"in_stock","sku":"APL-IPA5","createdAt":"2024-01-18"},{"id":"prod_007","name":"Logitech MX Master 3S"
+PASS
+
+GET http://localhost:3000/api/products
+headers_used={"Cookie": "***REDACTED***"}
+expected_status=200 actual_status=200
+response_body=[{"id":"prod_001","name":"iPhone 15 Pro","price":999.99,"stock":45,"category":"Electronics","status":"in_stock","sku":"APL-IP15P","createdAt":"2024-01-10"},{"id":"prod_002","name":"Samsung Galaxy S24","price":849.99,"stock":32,"category":"Electronics","status":"in_stock","sku":"SAM-GS24","createdAt":"2024-01-12"},{"id":"prod_003","name":"MacBook Pro M3","price":1999,"stock":0,"category":"Computers","status":"out_of_stock","sku":"APL-MBP-M3","createdAt":"2024-01-05"},{"id":"prod_004","name":"Sony WH-1000XM5 Headphones","price":279.99,"stock":78,"category":"Audio","status":"in_stock","sku":"SNY-WH1000","createdAt":"2024-01-20"},{"id":"prod_005","name":"Dell XPS 15 Laptop","price":1549,"stock":0,"category":"Computers","status":"out_of_stock","sku":"DLL-XPS15","createdAt":"2024-01-08"},{"id":"prod_006","name":"iPad Air (5th Gen)","price":599.99,"stock":120,"category":"Electronics","status":"in_stock","sku":"APL-IPA5","createdAt":"2024-01-18"},{"id":"prod_007","name":"Logitech MX Master 3S"
+PASS
+
+GET http://localhost:3000/api/products
+headers_used={"Cookie": "***REDACTED***"}
+expected_status=200 actual_status=200
+response_body=[{"id":"prod_001","name":"iPhone 15 Pro","price":999.99,"stock":45,"category":"Electronics","status":"in_stock","sku":"APL-IP15P","createdAt":"2024-01-10"},{"id":"prod_002","name":"Samsung Galaxy S24","price":849.99,"stock":32,"category":"Electronics","status":"in_stock","sku":"SAM-GS24","createdAt":"2024-01-12"},{"id":"prod_003","name":"MacBook Pro M3","price":1999,"stock":0,"category":"Computers","status":"out_of_stock","sku":"APL-MBP-M3","createdAt":"2024-01-05"},{"id":"prod_004","name":"Sony WH-1000XM5 Headphones","price":279.99,"stock":78,"category":"Audio","status":"in_stock","sku":"SNY-WH1000","createdAt":"2024-01-20"},{"id":"prod_005","name":"Dell XPS 15 Laptop","price":1549,"stock":0,"category":"Computers","status":"out_of_stock","sku":"DLL-XPS15","createdAt":"2024-01-08"},{"id":"prod_006","name":"iPad Air (5th Gen)","price":599.99,"stock":120,"category":"Electronics","status":"in_stock","sku":"APL-IPA5","createdAt":"2024-01-18"},{"id":"prod_007","name":"Logitech MX Master 3S"
+PASS
