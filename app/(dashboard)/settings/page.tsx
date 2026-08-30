@@ -41,7 +41,7 @@ export default function SettingsPage() {
           className={`save-btn ${saved ? 'saved' : ''}`}
           onClick={handleSave}
         >
-          {saved ? 'Saved!' : 'Save Changess'}
+          {saved ? 'Saved!' : 'Save Changes'}
         </button>
       </div>
 
