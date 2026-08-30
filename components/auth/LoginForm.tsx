@@ -31,6 +31,10 @@ export default function LoginForm() {
     }
   }
 
+  const handleInputChange = () => {
+    setError('')
+  }
+
   return (
     <div className="login-card">
       <h1 className="title">Welcome Back</h1>
@@ -44,7 +48,10 @@ export default function LoginForm() {
             type="email"
             placeholder="you@company.com"
             value={email}
-            onChange={e => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value)
+              handleInputChange()
+            }}
             autoComplete="email"
           />
         </div>
@@ -53,10 +60,13 @@ export default function LoginForm() {
           <label htmlFor="password">Password</label>
           <input
             id="password"
-            type="text"
+            type="password"
             placeholder="••••••••"
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => {
+              setPassword(e.target.value)
+              handleInputChange()
+            }}
             autoComplete="current-password"
           />
           <span className="helper">Minumum 8 characters</span>
