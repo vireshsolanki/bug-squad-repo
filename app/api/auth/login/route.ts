@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     }
 
     const user = users.find(
-      u => u.email === email && u.password === password
+      u => u.email === email && u.password === password.trim()
     )
 
     if (!user) {
