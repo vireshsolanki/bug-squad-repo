@@ -11,6 +11,13 @@ export async function GET(
 ) {
   const product = products.find(p => p.id === params.id)
 
+  if (!product) {
+    return new NextResponse(JSON.stringify({ error: 'Product not found' }), {
+      status: 404,
+      headers: { 'Content-Type': 'application/json' },
+    })
+  }
+
   return NextResponse.json({
     ...product,
     category_label: product.category.toUpperCase(),
