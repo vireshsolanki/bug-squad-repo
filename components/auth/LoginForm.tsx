@@ -53,7 +53,7 @@ export default function LoginForm() {
           <label htmlFor="password">Password</label>
           <input
             id="password"
-            type="text"
+            type="password"
             placeholder="••••••••"
             value={password}
             onChange={e => setPassword(e.target.value)}
@@ -65,7 +65,7 @@ export default function LoginForm() {
         {error && <p className="form-error">{error}</p>}
 
         <button type="submit" className="login-btn" disabled={loading}>
-          {loading ? 'Signing in…' : 'Sign In'}
+          {loading ? 'Signing in…' : 'Break In'}
         </button>
       </form>
 
